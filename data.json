@@ -1,0 +1,169 @@
+{
+    "arrayQuestion": [
+        {
+            "id": 1,
+            "question": "What does CPU stand for?",
+            "options": [
+                "Central Process Unit",
+                "Central Processing Unit",
+                "Computer Personal Unit",
+                "Control Processing Unit"
+            ],
+            "correctAnswer": "Central Processing Unit"
+        },
+        {
+            "id": 2,
+            "question": "Which language is used for web styling?",
+            "options": [
+                "HTML",
+                "Python",
+                "CSS",
+                "C++"
+            ],
+            "correctAnswer": "CSS"
+        },
+        {
+            "id": 3,
+            "question": "Which of the following is a JavaScript framework?",
+            "options": [
+                "React",
+                "Laravel",
+                "Django",
+                "Flask"
+            ],
+            "correctAnswer": "React"
+        },
+        {
+            "id": 4,
+            "question": "What does JSON stand for?",
+            "options": [
+                "Java Standard Object Notation",
+                "JavaScript Object Notation",
+                "Java Source Open Network",
+                "None of the above"
+            ],
+            "correctAnswer": "JavaScript Object Notation"
+        },
+        {
+            "id": 5,
+            "question": "Which company developed Node.js?",
+            "options": [
+                "Google",
+                "Microsoft",
+                "Ryan Dahl",
+                "Facebook"
+            ],
+            "correctAnswer": "Ryan Dahl"
+        },
+        {
+            "id": 6,
+            "question": "Which HTTP method is used to update data?",
+            "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "FETCH"
+            ],
+            "correctAnswer": "PUT"
+        },
+        {
+            "id": 7,
+            "question": "Which database is NoSQL?",
+            "options": [
+                "MySQL",
+                "MongoDB",
+                "PostgreSQL",
+                "Oracle"
+            ],
+            "correctAnswer": "MongoDB"
+        },
+        {
+            "id": 8,
+            "question": "Which symbol is used for comments in JavaScript?",
+            "options": [
+                "//",
+                "##",
+                "*/*/",
+                "**"
+            ],
+            "correctAnswer": "//"
+        },
+        {
+            "id": 9,
+            "question": "Which hook is used for state in React?",
+            "options": [
+                "useEffect",
+                "useState",
+                "useRef",
+                "useMemo"
+            ],
+            "correctAnswer": "useState"
+        },
+        {
+            "id": 10,
+            "question": "Which protocol is used for secure communication?",
+            "options": [
+                "HTTP",
+                "FTP",
+                "HTTPS",
+                "SMTP"
+            ],
+            "correctAnswer": "HTTPS"
+        },
+        {
+            "id": 11,
+            "question": "Which keyword declares a constant in JavaScript?",
+            "options": [
+                "let",
+                "var",
+                "const",
+                "static"
+            ],
+            "correctAnswer": "const"
+        },
+        {
+            "id": 12,
+            "question": "Which tool is used for version control?",
+            "options": [
+                "Git",
+                "Docker",
+                "Webpack",
+                "NPM"
+            ],
+            "correctAnswer": "Git"
+        },
+        {
+            "id": 13,
+            "question": "Which company created React?",
+            "options": [
+                "Google",
+                "Facebook",
+                "Microsoft",
+                "Apple"
+            ],
+            "correctAnswer": "Facebook"
+        },
+        {
+            "id": 14,
+            "question": "Which method converts JSON to JavaScript object?",
+            "options": [
+                "JSON.parse()",
+                "JSON.stringify()",
+                "JSON.convert()",
+                "JSON.toObject()"
+            ],
+            "correctAnswer": "JSON.parse()"
+        },
+        {
+            "id": 15,
+            "question": "Which of the following is a backend runtime?",
+            "options": [
+                "Node.js",
+                "Angular",
+                "Vue",
+                "Bootstrap"
+            ],
+            "correctAnswer": "Node.js"
+        }
+    ]
+}

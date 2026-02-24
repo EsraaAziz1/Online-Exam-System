@@ -1,0 +1,73 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    background-color: azure;
+}
+
+.userD {
+    width: 60%;
+    height: 120px;
+    padding: 25px;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(188, 216, 221);
+}
+.userD .txt{
+    border: none;
+    height: 20px;
+}
+
+ .btn{
+    border: none;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+/* ////////////////////////////Exam/////////////////////////// */
+
+.examForm{
+    width: 80%;
+    height: 550px;
+    padding: 25px;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(188, 216, 221);
+}
+.examForm ul{
+    list-style: none;
+}
+.examForm li{
+    width: 70%;
+    height: 30px;
+    background-color:rgb(165, 193, 197) ;
+    text-align: left;
+    margin: auto;
+    padding: 7px;
+    padding-left: 35px;
+    padding-top: 15px;
+
+
+}
+.prev , .next , .submit{
+    background-color: rgba(0, 99, 119, 0.748);
+    color: white ;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.Time_Remaining{
+    color: rgb(27, 85, 65);
+}
