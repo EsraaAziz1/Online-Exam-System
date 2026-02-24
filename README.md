@@ -16,6 +16,14 @@ It validates user input, fetches questions dynamically from a JSON Server, and c
 - HTML, CSS, JavaScript
 - JSON Server (to simulate backend and questions)
 - Fetch API for dynamically retrieving questions
+  
+## Future Improvements
+
+Here are some features that could be added in the future to enhance the Online Exam System:
+- **User Authentication:** Allow users to register, log in, and track their scores.
+- **Question Categories and Randomization:** Organize questions by category and show them in random order for each exam attempt.
+- **Store Scores in a Real Database:** Replace JSON Server with a proper backend database (like MongoDB) to save user results permanently.
+- **Mobile-Friendly Responsive Design:** Improve the layout to work seamlessly on mobile devices.
 
 ## How to Run
 
