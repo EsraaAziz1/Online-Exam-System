@@ -36,11 +36,8 @@ class Exam {
             renderData()
         }
         else {
-            //    next.style.backgroundColor='rgba(147, 147, 147, 0.125)'  
-            next.style.cssText = `
-                 cursor: not-allowed;
-                background-color: rgba(147, 147, 147, 0.125)
-           `
+            next.style.backgroundColor = 'rgba(147, 147, 147, 0.125)'
+            next.style.cursor = "not-allowed;"
         }
     }
     ///////////////////////Previous///////////////////////
@@ -177,12 +174,21 @@ next.addEventListener('click', () => {
 question_answer.addEventListener('click', (e) => {
     if (e.target.classList.contains('answer')) {
         // console.log(e)
-        let AnswerId = e.target.parentElement.parentElement.dataset.id;
+        let questionParent = e.target.closest('.inner')
+        // let AnswerId = e.target.parentElement.parentElement.dataset.id;
+        let AnswerId = questionParent.dataset.id;
         // console.log(AnswerId)
-        let selsectAnswer = e.target.parentElement.parentElement.querySelectorAll('.answer')
+        let selsectAnswer = questionParent.querySelectorAll('.answer')
+        selsectAnswer.forEach(option => {
+            option.classList.remove('selected');
+            option.style.backgroundColor = '';
+        });
+        e.target.classList.add('selected');
+        e.target.style.backgroundColor = 'rgba(0, 99, 119, 0.748)';
+
+
         let arrStorage = JSON.parse(localStorage.getItem('Choose_Answer')) || [];
         // console.log(arrStorage)
-
         let existingQuestion = arrStorage.find(item => item.id === AnswerId);
         //   console.log(existingQuestion)
         if (existingQuestion) {
@@ -198,10 +204,7 @@ question_answer.addEventListener('click', (e) => {
                 answer: e.target.innerHTML
             });
         }
-        selsectAnswer.forEach((elm) => {
-            elm.style.backgroundColor = ''
-        });
-        e.target.style.backgroundColor = 'rgba(0, 99, 119, 0.748)';
+      
         localStorage.setItem("Choose_Answer", JSON.stringify(arrStorage));
     }
 
@@ -214,7 +217,8 @@ submit.addEventListener('click', async () => {
 
 //////////////////////show Question///////////////////
 function oneQuestion(arrFetched) {
-    question_answer.innerHTML = ' '
+    question_answer.innerHTML = ' '; 4
+    let arrStorage = JSON.parse(localStorage.getItem('Choose_Answer')) || [];
     for (let index = 0; index < arrFetched.length; index++) {
         question_answer.innerHTML += `
                 <div class="inner" data-id=${arrFetched[index].id}>
@@ -228,7 +232,19 @@ function oneQuestion(arrFetched) {
                         </ul>
                     </p>
                     <br> 
-                    </div>`
+               </div> `
+        let Find_Answer_stored = arrStorage.find(elm => String(elm.id) === String(arrFetched[index].id));
+        if (Find_Answer_stored) {
+            let Options = question_answer.querySelectorAll(`.inner[data-id="${arrFetched[index].id}"] .answer`);
+            Options.forEach(option => {
+                if (option.innerHTML === Find_Answer_stored.answer) {
+                    option.classList.add('selected');
+                    option.style.backgroundColor = 'rgba(0, 99, 119, 0.748)';
+
+                }
+            });
+        }
+
     }
 }
 
@@ -242,5 +258,6 @@ function renderData() {
     TotalQuestion.innerHTML = fetched.length;
 
     let prePage = fetched.slice(start, end);
-    oneQuestion(prePage);  
+    oneQuestion(prePage);
+
 }

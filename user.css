@@ -71,3 +71,7 @@ body {
 .Time_Remaining{
     color: rgb(27, 85, 65);
 }
+
+.answer .selected {
+  background-color: rgba(0, 99, 119, 0.748) !important;
+}
