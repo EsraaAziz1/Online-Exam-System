@@ -174,11 +174,13 @@ next.addEventListener('click', () => {
 question_answer.addEventListener('click', (e) => {
     if (e.target.classList.contains('answer')) {
         // console.log(e)
-        let questionParent = e.target.closest('.inner')
-        // let AnswerId = e.target.parentElement.parentElement.dataset.id;
+        let questionParent = e.target.closest('.inner');
         let AnswerId = questionParent.dataset.id;
         // console.log(AnswerId)
-        let selsectAnswer = questionParent.querySelectorAll('.answer')
+
+        ///////////////// Background for Answer///////////////////
+
+        let selsectAnswer = questionParent.querySelectorAll('.answer');
         selsectAnswer.forEach(option => {
             option.classList.remove('selected');
             option.style.backgroundColor = '';
@@ -186,19 +188,20 @@ question_answer.addEventListener('click', (e) => {
         e.target.classList.add('selected');
         e.target.style.backgroundColor = 'rgba(0, 99, 119, 0.748)';
 
+       //////////////////// Save in localStorage ////////////////////////
 
         let arrStorage = JSON.parse(localStorage.getItem('Choose_Answer')) || [];
         // console.log(arrStorage)
         let existingQuestion = arrStorage.find(item => item.id === AnswerId);
         //   console.log(existingQuestion)
         if (existingQuestion) {
-            ///////// Update///////
+            ////// Update Answer////
             //   console.log(existingQuestion.answer)
             existingQuestion.answer = e.target.innerHTML;
             //   console.log(existingQuestion)
         }
         else {
-            /////// Add new Answer ////////
+            /// Add new Answer ////
             arrStorage.push({
                 id: AnswerId,
                 answer: e.target.innerHTML
@@ -233,6 +236,8 @@ function oneQuestion(arrFetched) {
                     </p>
                     <br> 
                </div> `
+
+               ////////// Save Answerbackground///////////////////
         let Find_Answer_stored = arrStorage.find(elm => String(elm.id) === String(arrFetched[index].id));
         if (Find_Answer_stored) {
             let Options = question_answer.querySelectorAll(`.inner[data-id="${arrFetched[index].id}"] .answer`);
