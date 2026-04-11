@@ -10,7 +10,7 @@ let txt_value = txt.value.trim();
              alert('Please Enter Valid Name')       
       }
       else{
-        localStorage.setItem('User_Name' , JSON.stringify(txt_value))
-        open('start-Exam.html');
+        localStorage.setItem('User_Name' , JSON.stringify(txt_value));
+        window.location='start-Exam.html';
       }
 })
